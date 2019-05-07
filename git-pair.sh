@@ -56,9 +56,27 @@ ask_for_coworker
 
 echo "#${delimiterString}" >> $gitCommitTemplatePath
 
+# We want to amend the last commit with the authors => get the last message
+if [[ $1 = 'amend' ]]; then
+    lastCommitMessage=$(git log --format=%B -n1)
+    lastCommitMessage+='\n'
+fi
+
 for COWORKER in "${coworkers[@]}"; do
     echo "Co-authored-by: $COWORKER" >> $gitCommitTemplatePath
+
+    # also add the authors to the latest commit
+    if [[ $1 = 'amend' ]]; then
+        lastCommitMessage+='\n'
+        lastCommitMessage+="Co-authored-by: $COWORKER"
+    fi
 done
+
+if [[ $1 = 'amend' ]]; then
+    git commit --amend -q -m "$(echo -e "$lastCommitMessage")"
+    echo #
+    echo "The co-authors were added to the last commit"
+fi
 
 echo #
 echo 'You are now pairing with'
