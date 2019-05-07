@@ -50,3 +50,7 @@ The co-authors are now added to your global git commit template file.
 > git-pair stop
 stopped pairing
 ```
+
+## Note
+
+Since `git commit -m` doesn't use the global commit template, this script won't work if you use `git commit -m`
