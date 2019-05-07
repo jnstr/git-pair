@@ -57,6 +57,16 @@ Co-authored-by: Jens Duo <jens@trio.sexy>
 stopped pairing
 ```
 
+### Add the co-authors to your last commit 
+
+By using the `amend` option, the co-authors are added to your last commit as well.  
+
+Note: The global commit template is also updated when you use this option, so it behaves just like the normal `git-pair` but it adds extra functionality.  
+
+```
+> git-pair amend
+```
+
 ## Note
 
 Since `git commit -m` doesn't use the global commit template, this script won't work if you use `git commit -m`
