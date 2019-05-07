@@ -32,7 +32,7 @@ render_git_commit_error_message() {
 }
 
 # We need to make sure the git commit template file is set and exists
-gitCommitTemplatePath=$(git config commit.templates)
+gitCommitTemplatePath=$(git config commit.template)
 if [ -z "$gitCommitTemplatePath" ]; then
     render_git_commit_error_message
     exit
