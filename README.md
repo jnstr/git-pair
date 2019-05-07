@@ -1,13 +1,13 @@
 # Git-pair
 
-This is a simple utility to add co-workers to your commits.
+This is a simple utility to add co-authors to your commits.
 
 # Why?
 
 Git added the possibility for co-authors in 2018: https://github.blog/2018-01-29-commit-together-with-co-authors/  
 Since we are pairing a lot at my day job, it's easy to automate the process of adding co-authors to your commits.
 
-This is a simple shell script that modiefies your global git commit message template (`git config commit.template`) and appends the co-authors at the end of the file. You can also remove the co-authors when you are done pairing.
+This is a simple shell script that modifies your global git commit template (`git config commit.template`) and appends the co-authors at the end of the file. It can also remove the co-authors when you are done pairing.
 
 ## Installation
 
