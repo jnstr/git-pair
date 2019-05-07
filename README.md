@@ -13,8 +13,8 @@ This is a simple shell script that modiefies your global git commit message temp
 
 1. Clone this repository
 2. cd into the project directory
-3. `chmod +x pair.sh`
-4. `ln -s "$(pwd)/pair.sh" /usr/local/bin/git-pair`
+3. `chmod +x git-pair.sh`
+4. `ln -s "$(pwd)/git-pair.sh" /usr/local/bin/git-pair`
 
 ## Usage
 
